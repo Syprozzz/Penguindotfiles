@@ -1,0 +1,9 @@
+#! /bin/sh
+
+hyprctl keyword windowrule "workspace 7 silent,Electron" && hyprctl dispatch exec "discord"
+hyprctl keyword windowrule "workspace special silent,alacritty" 
+mpd &
+sleep 15
+
+hyprctl keyword windowrule "unset,alacritty"
+#hyprctl reload
